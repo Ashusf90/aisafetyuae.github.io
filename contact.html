@@ -121,119 +121,47 @@
             <!-- CONTACT FORM -->
 
             <div class="bg-white p-8 rounded-xl shadow-md">
-              <form
-                action="https://formsubmit.co/yusraadil91@gmail.com"
-                method="POST"
-                class="space-y-6"
-              >
+              <form id="contactForm" class="space-y-4">
                 <input
-                  type="hidden"
-                  name="_subject"
-                  value="New Message from AI Safety UAE"
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  class="w-full border p-3 rounded"
                 />
 
-                <input type="hidden" name="_captcha" value="false" />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                  class="w-full border p-3 rounded"
+                />
 
-                <input type="hidden" name="_next" value="thankyou.html" />
-
-                <div>
-                  <label class="block text-sm font-medium mb-2">Name</label>
-
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label class="block text-sm font-medium mb-2">Email</label>
-
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label class="block text-sm font-medium mb-2">Message</label>
-
-                  <textarea
-                    name="message"
-                    rows="5"
-                    required
-                    class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none"
-                  ></textarea>
-                </div>
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  required
+                  rows="5"
+                  class="w-full border p-3 rounded"
+                ></textarea>
 
                 <button
                   type="submit"
-                  class="w-full text-white font-semibold py-3 rounded-lg transition hover:scale-105"
-                  style="background: #9e2e2e;"
+                  class="text-white px-6 py-2 rounded-full"
+                  style="background-color: #9e2e2e;"
                 >
                   Send Message
                 </button>
+
+                <p id="successMessage" class="text-green-600 hidden">
+                  Message sent successfully!
+                </p>
               </form>
             </div>
           </div>
         </div>
       </section>
-      <!-- <section class="p-8 sm:p-16 min-h-screen">
-        <div class="max-w-4xl mx-auto text-gray-900">
-          <h1 class="text-4xl sm:text-5xl font-bold mb-6">Get in touch</h1>
-          <p class="text-lg text-gray-600 mb-8">
-            Have a question or want to get involved? Fill out the form below or
-            reach out to us on our social channels.
-          </p>
-          <form class="space-y-6">
-            <div>
-              <label
-                for="name"
-                class="block text-sm font-medium text-gray-700 mb-2"
-                >Name</label
-              >
-              <input
-                type="text"
-                id="name"
-                class="w-full p-3 bg-white rounded-lg text-gray-900 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div>
-              <label
-                for="email"
-                class="block text-sm font-medium text-gray-700 mb-2"
-                >Email</label
-              >
-              <input
-                type="email"
-                id="email"
-                class="w-full p-3 bg-white rounded-lg text-gray-900 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div>
-              <label
-                for="message"
-                class="block text-sm font-medium text-gray-700 mb-2"
-                >Message</label
-              >
-              <textarea
-                id="message"
-                rows="5"
-                class="w-full p-3 bg-white rounded-lg text-gray-900 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
-      </section> -->
     </main>
 
     <footer
@@ -246,11 +174,6 @@
           <h3 class="text-white text-3xl font-bold mb-2">AI Safety UAE</h3>
           <p>Stay informed.</p>
           <div class="mt-4 flex">
-            <!-- <input
-              type="email"
-              placeholder="Enter your email"
-              class="bg-gray-800 p-3 rounded-l-lg text-sm text-white focus:outline-none w-full max-w-xs"
-            /> -->
             <a href="https://luma.com/ai-safety-uae" target="_blank">
               <button
                 class="hover:bg-blue-700 text-white py-3 px-6 rounded-r-lg transition-colors duration-300"
@@ -314,5 +237,28 @@
         <p>&copy; 2026 AI Safety UAE. All rights reserved.</p>
       </div>
     </footer>
+
+    <script>
+      const form = document.getElementById('contactForm')
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault()
+
+        const formData = new FormData(form)
+
+        fetch('https://formsubmit.co/ajax/info@aisafety.ae', {
+          method: 'POST',
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            document.getElementById('successMessage').classList.remove('hidden')
+            form.reset()
+          })
+          .catch((error) => {
+            alert('Something went wrong.')
+          })
+      })
+    </script>
   </body>
 </html>
