@@ -1,0 +1,247 @@
+body {
+  font-family: "Inter", sans-serif, "Noto Kufi Arabic";
+  background-color: #f8fafc;
+  color: #1f2937;
+}
+
+/* Arabic font */
+html[lang="ar"] body {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  direction: rtl;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/*********** Language translator***********/
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-te-gadget {
+  display: none !important;
+}
+
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-combo {
+  display: none !important;
+}
+
+iframe.skiptranslate {
+  display: none !important;
+}
+
+/* Hide google translate banner */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+/* Remove page shift */
+body {
+  top: 0 !important;
+}
+
+/* Hide google widgets */
+.goog-te-gadget {
+  display: none !important;
+}
+
+.goog-logo-link {
+  display: none !important;
+}
+
+/* Hide mobile popup */
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+.skiptranslate {
+  display: none !important;
+}
+
+/* Prevent Google Translate from modifying the language switcher */
+.notranslate {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Override any Google Translate styles */
+.goog-te-banner-frame,
+.goog-te-gadget,
+.goog-tooltip,
+.goog-text-highlight {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+/* Force no translation on language switcher */
+#langButton,
+#langButton *,
+#currentLang,
+#langMenu,
+#langMenu * {
+  -webkit-user-modify: read-only !important;
+  -moz-user-modify: read-only !important;
+  user-modify: read-only !important;
+}
+
+/* Prevent any text transformation */
+#currentLang {
+  text-transform: none !important;
+  font-variant: normal !important;
+}
+
+/* High specificity to override Google Translate */
+html body div#langButton span#currentLang {
+  content: "English" !important;
+}
+
+html[lang="ar"] body div#langButton span#currentLang {
+  content: "العربية" !important;
+}
+
+/*********** Leadership Page ***********/
+
+.wrapper {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  /* padding: 60px 40px; */
+}
+
+.left-title {
+  font-size: 32px;
+  color: #0b6a7a;
+  /* padding-top: 40px; */
+}
+
+.right {
+  border-left: 1px solid #cfcfcf;
+  padding-left: 40px;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.section p {
+  font-size: 14px;
+  color: #555;
+}
+
+.members {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 40px;
+  margin-top: 20px;
+}
+
+.member {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #ddd;
+}
+
+.member img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.member-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.member-desc {
+  font-size: 14px;
+  color: #444;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .wrapper {
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .right {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .left-title {
+    margin-bottom: 30px;
+  }
+
+  .members {
+    grid-template-columns: 1fr;
+  }
+}
+
+/************ Services ************/
+.text-maroon {
+  color: #9e2e2e;
+}
+.bg-maroon {
+  background-color: #9e2e2e;
+}
+
+/* Hide content until translation is ready */
+body {
+  visibility: hidden;
+}
+
+body.visible {
+  visibility: visible;
+}
+
+/* Temporary test styles */
+header nav a.test-highlight {
+  background-color: yellow !important;
+  border: 3px solid red !important;
+}
+
+header nav a {
+  transition: none !important; /* Disable transitions for testing */
+}

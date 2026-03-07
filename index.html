@@ -26,201 +26,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
     />
-
     <!-- Add Alpine.js for toggle -->
     <script
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
       defer
     ></script>
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #f8fafc;
-        color: #1f2937;
-      }
-      /* Arabic font */
-      html[lang='ar'] body {
-        font-family: 'Noto Kufi Arabic', sans-serif;
-        direction: rtl;
-      }
-    </style>
-    <style>
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .fade-in-up {
-        opacity: 0;
-        transform: translateY(30px);
-        animation: fadeInUp 0.8s ease-out forwards;
-      }
-    </style>
-    <style>
-      .goog-te-banner-frame.skiptranslate {
-        display: none !important;
-      }
-
-      body {
-        top: 0 !important;
-      }
-
-      .goog-te-gadget {
-        display: none !important;
-      }
-
-      .goog-logo-link {
-        display: none !important;
-      }
-
-      .goog-te-combo {
-        display: none !important;
-      }
-
-      iframe.skiptranslate {
-        display: none !important;
-      }
-    </style>
-    <style>
-      /* Hide google translate banner */
-      .goog-te-banner-frame.skiptranslate {
-        display: none !important;
-      }
-
-      /* Remove page shift */
-      body {
-        top: 0 !important;
-      }
-
-      /* Hide google widgets */
-      .goog-te-gadget {
-        display: none !important;
-      }
-
-      .goog-logo-link {
-        display: none !important;
-      }
-
-      /* Hide mobile popup */
-      .goog-te-balloon-frame {
-        display: none !important;
-      }
-
-      .skiptranslate {
-        display: none !important;
-      }
-    </style>
+    <!-- ✅ Main css -->
+    <link href="/css/main.css" rel="stylesheet" />
+    <!-- Add translation -->
+    <script src="js/translation.js" defer></script>
+    <meta name="google" content="notranslate" />
   </head>
   <body class="bg-gray-50 text-gray-800">
-    <header
-      class="sticky top-0 z-50 bg-white/50 backdrop-blur-md p-4 flex justify-between items-center border-b border-gray-200"
-    >
-      <div class="text-gray-900 text-2xl font-bold">
-        <img
-          src="./images/AISafetyUAELogo.png"
-          alt="AI Safety UAE Logo"
-          class="w-auto h-10"
-        />
-      </div>
+    <!-- header was here -->
+    <div id="header"></div>
 
-      <div class="flex items-center space-x-6">
-        <nav class="hidden md:flex items-center space-x-6">
-          <a
-            href="index.html"
-            class="text-lg font-medium transition-colors duration-300 ease-in-out font-semibold"
-            style="color: #4b5563;"
-          >
-            Home
-          </a>
-          <a
-            href="about.html"
-            class="text-lg font-medium transition-colors duration-300 ease-in-out text-gray-600 hover:text-gray-900"
-          >
-            About
-          </a>
-          <a
-            href="events.html"
-            class="text-lg font-medium transition-colors duration-300 ease-in-out text-gray-600 hover:text-gray-900"
-          >
-            Events
-          </a>
-          <a
-            href="services.html"
-            class="text-lg font-medium transition-colors duration-300 ease-in-out"
-          >
-            Services
-          </a>
-          <a
-            href="contact.html"
-            class="text-lg font-medium transition-colors duration-300 ease-in-out text-gray-600 hover:text-gray-900"
-          >
-            Contact
-          </a>
-        </nav>
-
-        <div class="relative">
-          <button
-            id="langButton"
-            class="flex items-center gap-1 text-sm font-semibold px-3 py-2 rounded-full hover:bg-gray-100 transition focus:outline-none"
-          >
-            <span id="currentLang">EN</span>
-            <span>▼</span>
-          </button>
-
-          <div
-            id="langMenu"
-            class="hidden absolute right-0 mt-2 w-28 bg-white shadow-lg rounded-lg overflow-hidden text-sm"
-          >
-            <div
-              onclick="setLanguage('en','EN')"
-              class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-            >
-              English
-            </div>
-            <div
-              onclick="setLanguage('ar','AR')"
-              class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-            >
-              Arabic
-            </div>
-            <!-- <div
-              onclick="setLanguage('hi','HI')"
-              class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-            >
-              Hindi
-            </div>
-            <div
-              onclick="setLanguage('fr','FR')"
-              class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-            >
-              French
-            </div> -->
-          </div>
-        </div>
-
-        <div id="google_translate_element" style="display: none;"></div>
-
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeyk7iTZeUXYixHCrkbJ5c6oybmYs-XseIlJTNyCzt77PXCXA/viewform"
-          target="_blank"
-        >
-          <button
-            class="hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300"
-            style="background-color: #9e2e2e;"
-          >
-            Join Us
-          </button>
-        </a>
-      </div>
-    </header>
-
-    <main>
+    <main id="main-content">
       <!-- Hero Section -->
       <section
         class="relative min-h-[70vh] flex items-end justify-center text-center p-8 text-white bg-[url('images/cybersecurity-bg.jpg')] bg-cover bg-center"
@@ -843,92 +664,11 @@
       </section>
     </main>
 
-    <footer
-      class="bg-gray-900 p-8 sm:p-16 text-center text-gray-300 border-t border-gray-700"
-    >
-      <div
-        class="flex flex-col md:flex-row justify-between items-center md:items-start max-w-7xl mx-auto"
-      >
-        <div class="mb-8 md:mb-0 text-left">
-          <h3 class="text-white text-3xl font-bold mb-2">AI Safety UAE</h3>
-          <p>Stay informed.</p>
-          <div class="mt-4 flex">
-            <!-- <input
-              type="email"
-              placeholder="Enter your email"
-              class="bg-gray-800 p-3 rounded-l-lg text-sm text-white focus:outline-none w-full max-w-xs"
-            /> -->
-            <a href="https://luma.com/ai-safety-uae" target="_blank">
-              <button
-                class="hover:bg-blue-700 text-white py-3 px-6 rounded-r-lg transition-colors duration-300"
-                style="background-color: #9e2e2e;"
-              >
-                Subscribe
-              </button>
-            </a>
-          </div>
-        </div>
-        <div class="grid grid-cols-2 gap-8 md:gap-16 text-left">
-          <div>
-            <h4 class="text-white font-semibold mb-2">Community</h4>
-            <ul class="space-y-1 text-sm">
-              <li>
-                <a href="services.html" class="hover:text-white">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#" class="hover:text-white">Projects</a>
-              </li>
-              <li>
-                <a href="Codeofconduct.html" class="hover:text-white">
-                  Code Of Conduct
-                </a>
-              </li>
-              <li>
-                <a href="#" class="hover:text-white">Resources</a>
-              </li>
-              <li>
-                <a href="#" class="hover:text-white">Resources</a>
-              </li>
-              <li>
-                <a
-                  href="https://luma.com/ai-safety-uae"
-                  target="_blank"
-                  class="hover:text-white"
-                >
-                  Events
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="text-white font-semibold mb-2">Social</h4>
-            <ul class="space-y-1 text-sm">
-              <li>
-                <a
-                  href="https://www.linkedin.com/groups/11862005/"
-                  class="hover:text-white"
-                >
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/aisafetyuae?igsh=cWFqOThpMm53ODdh"
-                  class="hover:text-white"
-                >
-                  Instagram
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="mt-12 pt-8 border-t border-gray-700 text-sm">
-        <p>&copy; 2026 AI Safety UAE. All rights reserved.</p>
-      </div>
-    </footer>
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script src="js/load-component.js"></script>
+    <script src="js/nav-highlight.js"></script>
+
     <script>
       const observer = new IntersectionObserver(
         (entries) => {
@@ -947,43 +687,6 @@
       document.querySelectorAll('.animate-on-scroll').forEach((el) => {
         observer.observe(el)
       })
-    </script>
-
-    <script>
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          { pageLanguage: 'en', autoDisplay: false },
-          'google_translate_element',
-        )
-      }
-
-      function setLanguage(lang, label) {
-        const select = document.querySelector('.goog-te-combo')
-        if (select) {
-          select.value = lang
-          select.dispatchEvent(new Event('change'))
-        }
-
-        document.getElementById('currentLang').innerText = label
-        document.getElementById('langMenu').classList.add('hidden')
-      }
-
-      document.getElementById('langButton').onclick = function () {
-        document.getElementById('langMenu').classList.toggle('hidden')
-      }
-    </script>
-
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script>
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          {
-            pageLanguage: 'en',
-            autoDisplay: false,
-          },
-          'google_translate_element',
-        )
-      }
     </script>
   </body>
 </html>

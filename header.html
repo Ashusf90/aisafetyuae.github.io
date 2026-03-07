@@ -1,0 +1,104 @@
+<header
+  class="sticky top-0 z-50 bg-white/50 backdrop-blur-md p-4 flex justify-between items-center border-b border-gray-200"
+>
+  <div class="text-gray-900 text-2xl font-bold">
+    <img
+      src="./images/AISafetyUAELogo.png"
+      alt="AI Safety UAE Logo"
+      class="w-auto h-10"
+    />
+  </div>
+
+  <div class="flex items-center space-x-6">
+    <nav class="hidden md:flex items-center space-x-6">
+      <a
+        href="index.html"
+        class="text-lg font-medium transition-colors duration-300 ease-in-out text-gray-600 hover:text-gray-900 px-2"
+        data-page="index"
+      >
+        Home
+      </a>
+      <a
+        href="about.html"
+        class="text-lg font-medium transition-colors duration-300 ease-in-out text-gray-600 hover:text-gray-900"
+        data-page="about"
+      >
+        About
+      </a>
+      <a
+        href="events.html"
+        class="text-lg font-medium transition-colors duration-300 ease-in-out text-gray-600 hover:text-gray-900"
+        data-page="events"
+      >
+        Events
+      </a>
+      <a
+        href="services.html"
+        class="text-lg font-medium transition-colors duration-300 ease-in-out text-gray-600 hover:text-gray-900"
+        data-page="services"
+      >
+        Services
+      </a>
+      <a
+        href="contact.html"
+        class="text-lg font-medium transition-colors duration-300 ease-in-out text-gray-600 hover:text-gray-900"
+        data-page="contact"
+      >
+        Contact
+      </a>
+    </nav>
+
+    <div class="relative" style="isolation: isolate;">
+      <button
+        id="langButton"
+        class="flex items-center gap-1 text-sm font-semibold px-3 py-2 rounded-full hover:bg-gray-100 transition focus:outline-none"
+        translate="no"
+      >
+        <span id="currentLang" translate="no" style="unicode-bidi: isolate;">
+          English
+        </span>
+        <span translate="no">▼</span>
+      </button>
+
+      <div
+        id="langMenu"
+        class="hidden absolute right-0 mt-2 w-28 bg-white shadow-lg rounded-lg overflow-hidden text-sm"
+        translate="no"
+      >
+        <div
+          onclick="setLanguage('en','EN')"
+          class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+          translate="no"
+        >
+          English
+        </div>
+        <div
+          onclick="setLanguage('ar','AR')"
+          class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+          translate="no"
+        >
+          العربية
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="google_translate_element"
+      style="display: none;"
+      class="notranslate"
+    ></div>
+
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSeyk7iTZeUXYixHCrkbJ5c6oybmYs-XseIlJTNyCzt77PXCXA/viewform"
+      target="_blank"
+    >
+      <button
+        class="hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300"
+        style="background-color: #9e2e2e;"
+      >
+        Join Us
+      </button>
+    </a>
+  </div>
+</header>
+
