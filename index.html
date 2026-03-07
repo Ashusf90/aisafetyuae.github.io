@@ -3,14 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Safety UAE</title>
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="google" content="notranslate" />
+    <title>AI Safety Services UAE | Training, Audits & Governance</title>
+    <meta
+      name="description"
+      content="Enterprise AI safety services in the UAE: 
+    foundational training, LLM model audits, ISO 42001 governance frameworks, 
+    and AI risk assessment. Delivered by certified experts."
+    />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- ✅ Add Font Awesome here -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -27,6 +37,11 @@
         font-family: 'Inter', sans-serif;
         background-color: #f8fafc;
         color: #1f2937;
+      }
+      /* Arabic font */
+      html[lang='ar'] body {
+        font-family: 'Noto Kufi Arabic', sans-serif;
+        direction: rtl;
       }
     </style>
     <style>
@@ -47,12 +62,65 @@
         animation: fadeInUp 0.8s ease-out forwards;
       }
     </style>
+    <style>
+      .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+      }
+
+      body {
+        top: 0 !important;
+      }
+
+      .goog-te-gadget {
+        display: none !important;
+      }
+
+      .goog-logo-link {
+        display: none !important;
+      }
+
+      .goog-te-combo {
+        display: none !important;
+      }
+
+      iframe.skiptranslate {
+        display: none !important;
+      }
+    </style>
+    <style>
+      /* Hide google translate banner */
+      .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+      }
+
+      /* Remove page shift */
+      body {
+        top: 0 !important;
+      }
+
+      /* Hide google widgets */
+      .goog-te-gadget {
+        display: none !important;
+      }
+
+      .goog-logo-link {
+        display: none !important;
+      }
+
+      /* Hide mobile popup */
+      .goog-te-balloon-frame {
+        display: none !important;
+      }
+
+      .skiptranslate {
+        display: none !important;
+      }
+    </style>
   </head>
   <body class="bg-gray-50 text-gray-800">
     <header
       class="sticky top-0 z-50 bg-white/50 backdrop-blur-md p-4 flex justify-between items-center border-b border-gray-200"
     >
-      <!-- <div class="text-gray-900 text-2xl font-bold">AI Safety UAE</div> -->
       <div class="text-gray-900 text-2xl font-bold">
         <img
           src="./images/AISafetyUAELogo.png"
@@ -61,33 +129,87 @@
         />
       </div>
 
-      <nav class="hidden md:flex items-center space-x-6">
+      <div class="flex items-center space-x-6">
+        <nav class="hidden md:flex items-center space-x-6">
+          <a
+            href="index.html"
+            class="text-lg font-medium transition-colors duration-300 ease-in-out font-semibold"
+            style="color: #4b5563;"
+          >
+            Home
+          </a>
+          <a
+            href="about.html"
+            class="text-lg font-medium transition-colors duration-300 ease-in-out text-gray-600 hover:text-gray-900"
+          >
+            About
+          </a>
+          <a
+            href="events.html"
+            class="text-lg font-medium transition-colors duration-300 ease-in-out text-gray-600 hover:text-gray-900"
+          >
+            Events
+          </a>
+          <a
+            href="services.html"
+            class="text-lg font-medium transition-colors duration-300 ease-in-out"
+          >
+            Services
+          </a>
+          <a
+            href="contact.html"
+            class="text-lg font-medium transition-colors duration-300 ease-in-out text-gray-600 hover:text-gray-900"
+          >
+            Contact
+          </a>
+        </nav>
+
+        <div class="relative">
+          <button
+            id="langButton"
+            class="flex items-center gap-1 text-sm font-semibold px-3 py-2 rounded-full hover:bg-gray-100 transition focus:outline-none"
+          >
+            <span id="currentLang">EN</span>
+            <span>▼</span>
+          </button>
+
+          <div
+            id="langMenu"
+            class="hidden absolute right-0 mt-2 w-28 bg-white shadow-lg rounded-lg overflow-hidden text-sm"
+          >
+            <div
+              onclick="setLanguage('en','EN')"
+              class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+            >
+              English
+            </div>
+            <div
+              onclick="setLanguage('ar','AR')"
+              class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+            >
+              Arabic
+            </div>
+            <!-- <div
+              onclick="setLanguage('hi','HI')"
+              class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+            >
+              Hindi
+            </div>
+            <div
+              onclick="setLanguage('fr','FR')"
+              class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+            >
+              French
+            </div> -->
+          </div>
+        </div>
+
+        <div id="google_translate_element" style="display: none;"></div>
+
         <a
-          href="index.html"
-          class="text-lg font-medium transition-colors duration-300 ease-in-out font-semibold"
-          style="color: #4b5563;"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeyk7iTZeUXYixHCrkbJ5c6oybmYs-XseIlJTNyCzt77PXCXA/viewform"
+          target="_blank"
         >
-          Home
-        </a>
-        <a
-          href="about.html"
-          class="text-lg font-medium transition-colors duration-300 ease-in-out text-gray-600 hover:text-gray-900"
-        >
-          About
-        </a>
-        <a
-          href="events.html"
-          class="text-lg font-medium transition-colors duration-300 ease-in-out text-gray-600 hover:text-gray-900"
-        >
-          Events
-        </a>
-        <a
-          href="contact.html"
-          class="text-lg font-medium transition-colors duration-300 ease-in-out text-gray-600 hover:text-gray-900"
-        >
-          Contact
-        </a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeyk7iTZeUXYixHCrkbJ5c6oybmYs-XseIlJTNyCzt77PXCXA/viewform" target="_blank">
           <button
             class="hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300"
             style="background-color: #9e2e2e;"
@@ -95,28 +217,38 @@
             Join Us
           </button>
         </a>
-      </nav>
+      </div>
     </header>
 
     <main>
       <!-- Hero Section -->
       <section
-        class="relative h-[60vh] flex items-end justify-center text-center p-8 text-white bg-[url('images/cybersecurity-bg.jpg')] bg-cover bg-center"
+        class="relative min-h-[70vh] flex items-end justify-center text-center p-8 text-white bg-[url('images/cybersecurity-bg.jpg')] bg-cover bg-center"
+        dir="rtl"
       >
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black/60"></div>
 
         <!-- Content -->
-        <div class="relative z-10 flex flex-col items-center max-w-4xl pb-16">
+        <div
+          class="relative z-10 flex flex-col items-center max-w-4xl pb-16 pt-24 w-full"
+        >
           <h1
-            class="text-4xl sm:text-6xl md:text-6xl font-bold tracking-tight mb-4 text-white"
+            class="text-4xl sm:text-6xl md:text-6xl font-bold tracking-tight mb-6 text-white leading-[1.5] sm:leading-[1.6] px-4"
           >
             Advancing AI Safety Together
           </h1>
-          <p class="text-lg sm:text-xl text-gray-200 mb-8">
-            Join our community to explore AI safety, share resources,
-            collaborate on projects, and participate in events. Together, we can
-            shape a safer AI future.
+          <h2
+            class="text-3xl sm:text-4xl md:text-4xl font-semibold tracking-tight mb-6 text-white leading-[1.5] px-4"
+          >
+            AI governance UAE & AI safety training UAE
+          </h2>
+          <p
+            class="text-lg sm:text-xl text-gray-200 mb-8 max-w-3xl leading-relaxed px-4"
+          >
+            "Join our community to explore AI safety , and access enterprise
+            training, model auditing, and AI governance services built for
+            organisations operating in the UAE."
           </p>
         </div>
       </section>
@@ -237,7 +369,127 @@
         </div>
       </section>
 
-      <!-- Initiatives Section -->
+      <!-- Services Section -->
+      <section class="p-8 sm:p-16 animate-on-scroll">
+        <div class="max-w-6xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Enterprise AI Safety Services
+          </h2>
+          <p class="text-gray-700 mb-8">
+            AI Safety UAE delivers hands-on training, technical model audits,
+            and governance frameworks to help organisations in the UAE adopt AI
+            responsibly and meet emerging regulatory requirements.
+          </p>
+
+          <div class="space-y-6 text-left">
+            <div>
+              <!-- class="p-6 bg-white rounded-lg shadow-md border border-gray-200" -->
+              <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <!-- Story Card -->
+                <div
+                  class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 backdrop-blur animate-on-scroll"
+                >
+                  <div class="flex items-center mb-4">
+                    <div>
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        Foundational AI Safety Training
+                      </h4>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 leading-relaxed">
+                    A 2-hour live session equipping teams with AI safety
+                    literacy, ethics awareness, and governance responsibility,
+                    designed for non-technical and mixed audiences.
+                  </p>
+                  <a
+                    href="services.html#training"
+                    class="mt-5 inline-block"
+                    style="color: #9e2e2e;"
+                  >
+                    Learn more →
+                  </a>
+                </div>
+                <!-- Story Card -->
+                <div
+                  class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 backdrop-blur animate-on-scroll"
+                >
+                  <div class="flex items-center mb-4">
+                    <div>
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        Advanced AI Safety Programme
+                      </h4>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 leading-relaxed">
+                    Intensive 1-week or 4-week courses covering AI alignment,
+                    societal risk, ISO 42001 compliance, and technical safety
+                    for developers and GRC professionals.
+                  </p>
+                  <a
+                    href="services.html#advanced"
+                    class="mt-5 inline-block"
+                    style="color: #9e2e2e;"
+                  >
+                    Learn more →
+                  </a>
+                </div>
+                <!-- Story Card -->
+                <div
+                  class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 backdrop-blur animate-on-scroll"
+                >
+                  <div class="flex items-center mb-4">
+                    <div>
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        LLM & Vision Model Audits
+                      </h4>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 leading-relaxed">
+                    7,500+ adversarial attack simulations including jailbreak
+                    testing, hallucination analysis, data leakage detection, and
+                    prompt injection testing. Delivered with a full mitigation
+                    report.
+                  </p>
+                  <a
+                    href="services.html#audit"
+                    class="mt-5 inline-block"
+                    style="color: #9e2e2e;"
+                  >
+                    Learn more →
+                  </a>
+                </div>
+                <!-- Story Card -->
+                <div
+                  class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 backdrop-blur animate-on-scroll"
+                >
+                  <div class="flex items-center mb-4">
+                    <div>
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        AI Risk & Governance Framework
+                      </h4>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 leading-relaxed">
+                    Enterprise AI risk assessment, regulatory alignment,
+                    use-case classification, and governance workflow design ,
+                    delivering a board-ready risk report and policy
+                    recommendations.
+                  </p>
+                  <a
+                    href="services.html#governance"
+                    class="mt-5 inline-block"
+                    style="color: #9e2e2e;"
+                  >
+                    Learn more →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Initiatives Section -->
       <section class="p-8 sm:p-16 animate-on-scroll">
         <div class="max-w-6xl mx-auto text-center">
           <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
@@ -527,6 +779,68 @@
           </div>
         </div>
       </section>
+
+      <!-- Credentials -->
+      <section class="py-20 bg-gray-50 animate-on-scroll" id="credentials">
+        <div class="max-w-6xl mx-auto px-6">
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12"
+          >
+            Delivered by Certified Experts
+          </h2>
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <!-- Story Card -->
+            <div
+              class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 backdrop-blur animate-on-scroll hover:bg-gradient-to-b hover:from-white hover:to-[#E5E7EB] rounded-lg transition-all duration-500"
+            >
+              <div class="flex flex-col items-center justify-center">
+                <span class="text-4xl mb-4">
+                  🏅
+                </span>
+                <h4 class="text-lg font-semibold text-gray-900 text-center">
+                  ISO 42001 Lead Auditor
+                </h4>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 backdrop-blur animate-on-scroll hover:bg-gradient-to-b hover:from-white hover:to-[#E5E7EB] rounded-lg transition-all duration-500"
+            >
+              <div class="flex flex-col items-center justify-center">
+                <span class="text-4xl mb-4">
+                  🏅
+                </span>
+                <h4 class="text-lg font-semibold text-gray-900 text-center">
+                  AI Governance Professional (AIGP) Certified
+                </h4>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 backdrop-blur animate-on-scroll hover:bg-gradient-to-b hover:from-white hover:to-[#E5E7EB] rounded-lg transition-all duration-500"
+            >
+              <div class="flex flex-col items-center justify-center">
+                <span class="text-4xl mb-4">
+                  🏅
+                </span>
+                <h4 class="text-lg font-semibold text-gray-900 text-center">
+                  Aligned with UAE AI Strategy 2031
+                </h4>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 backdrop-blur animate-on-scroll hover:bg-gradient-to-b hover:from-white hover:to-[#E5E7EB] rounded-lg transition-all duration-500"
+            >
+              <div class="flex flex-col items-center justify-center">
+                <span class="text-4xl mb-4">
+                  🏅
+                </span>
+                <h4 class="text-lg font-semibold text-gray-900 text-center">
+                  BlueDot Impact Partner
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer
@@ -559,12 +873,20 @@
             <h4 class="text-white font-semibold mb-2">Community</h4>
             <ul class="space-y-1 text-sm">
               <li>
+                <a href="services.html" class="hover:text-white">
+                  Services
+                </a>
+              </li>
+              <li>
                 <a href="#" class="hover:text-white">Projects</a>
               </li>
               <li>
                 <a href="Codeofconduct.html" class="hover:text-white">
                   Code Of Conduct
                 </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white">Resources</a>
               </li>
               <li>
                 <a href="#" class="hover:text-white">Resources</a>
@@ -625,6 +947,43 @@
       document.querySelectorAll('.animate-on-scroll').forEach((el) => {
         observer.observe(el)
       })
+    </script>
+
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: 'en', autoDisplay: false },
+          'google_translate_element',
+        )
+      }
+
+      function setLanguage(lang, label) {
+        const select = document.querySelector('.goog-te-combo')
+        if (select) {
+          select.value = lang
+          select.dispatchEvent(new Event('change'))
+        }
+
+        document.getElementById('currentLang').innerText = label
+        document.getElementById('langMenu').classList.add('hidden')
+      }
+
+      document.getElementById('langButton').onclick = function () {
+        document.getElementById('langMenu').classList.toggle('hidden')
+      }
+    </script>
+
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: 'en',
+            autoDisplay: false,
+          },
+          'google_translate_element',
+        )
+      }
     </script>
   </body>
 </html>
